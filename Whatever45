@@ -1,0 +1,51 @@
+Create table dolgnost  /*это первая таблица мной созданная*/
+(код counter constraint
+PrimaryKey PRIMARYKEY,/*здесь подразумевается связь*/
+Должность Char(9)
+FOREINKEY (“Должность”) REFERENCES Vich_technic (“Должность”));
+
+Create table “Os”/*это вторая таблица мной созданная*/ 
+(“кодопроса”counter constraint
+PrimaryKey PRIMARYKEY,/*здесь подразумевается связь*/
+Название ОС Char(10)
+FOREINKEY (“операционная_система”) REFERENCES Vich_technic (“операционная_система ”));
+
+Createtableotdel,/*Это третья таблица мной созданная */
+(“кодтовара”counter constraint
+PrimaryKey PRIMARY KEY, 
+Название отдела Char (14)
+
+CreatetableVich_technic,/*Это четвёртая таблица мной созданная */
+(“кодтовара”counter constraint
+PrimaryKey PRIMARY KEY, 
+“Наименование_оборудования%” Char(27),
+“Заводской_номер” Char(16),
+“Инвентарный_номер” Char(18),
+“Операционная_система” Char(21),
+“Лицензия” Char(9),
+“Ответственное_лицо” Char(19),
+“Отдел” Char(6),
+“Должность” Char(10),
+Примечаниеint);
+
+Createtablerashod_materials,/*Это пятая таблица мной созданная */
+(“кодтовара”counter constraint
+PrimaryKey PRIMARY KEY,/*здесь подразумевается связь*/
+“Оборудование”Char(12),
+Наименованиеint);
+
+Createtableoborudovanie,/*Это шестая таблица мной созданная */
+(“кодтовара”counter constraint
+PrimaryKey PRIMARY KEY, /*здесь подразумевается связь*/
+НазваниеChar(8)
+
+SELECT /*это первый запрос сделанный мной*/
+SELECT OS.id, OS.[Название ОС]
+FROM OS
+WHERE (((OS.id)=[Введите цифру 1-9]));
+
+SELECT /*это второй запрос сделанный мной*/
+SELECT vich_technic.id, vich_technic.Наименование_оборудования, vich_technic.Заводской_номер, vich_technic.Инвентарный_номер, vich_technic.Операционная_система, vich_technic.Лицензия, vich_technic.Ответственное_лицо, vich_technic.Отдел, vich_technic.Должность
+FROM vich_technic INNER JOIN [Ответственное лицо] ON vich_technic.Ответственное_лицо = [Ответственное лицо].ФИО
+WHERE (((vich_technic.id)=[Введите цифру 4-5]));
+
